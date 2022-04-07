@@ -1,13 +1,13 @@
 package random_strings;
 
-import org.apache.commons.lang3.RandomStringUtils;
+import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 
 public class NameFromRandomString {
 
     public static String[] getArrayOfRandomStrings(int arraySize, int stringLength) {
         String[] resultArray = new String[arraySize];
         for (int i = 0; i < resultArray.length; i++) {
-            resultArray[i] = RandomStringUtils.randomAlphabetic(stringLength);
+            resultArray[i] = randomAlphabetic(stringLength);
             resultArray[i] = resultArray[i].substring(0,1).toUpperCase() + resultArray[i].substring(1).toLowerCase();
         }
         return resultArray;
